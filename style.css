@@ -6,7 +6,7 @@
 
 #btns {
   padding: 20px;
-  background-color: grey;
+  background-color: #edeeef;
   margin-bottom: 20px;
 }
 
@@ -21,11 +21,11 @@
 }
 
 #btns .fa-play-circle {
-  color: green;
+  color: #5ced0e;
 }
 
 #btns .fa-pause-circle {
-  color: red;
+  color: #f73816;
 }
 
 .box {
@@ -34,17 +34,30 @@
   height: 100px;
   margin: 4px;
   display: inline-block;
+  /* border-radius: 50%; */
 }
 
 .red {
-  background-color: red;
+  background-color: #d85096;
 }
 .blue {
-  background-color: blue;
+  background-color: #0a7fad;
 }
 .green {
-  background-color: green;
+  background-color: #368742;
 }
 .yellow {
-  background-color: yellow;
+  background-color: #edf41a;
+}
+.pink {
+  background-color: #e2167c;
+}
+.purple {
+  background-color: #af16e2;
+}
+.orange {
+  background-color: #ed7310;
+}
+.lightblue {
+  background-color: #37d0ef;
 }

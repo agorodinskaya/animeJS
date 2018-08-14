@@ -1,45 +1,7 @@
-// anime({
-//   targets: "div.box.red",
-//   translateY: [{ value: 100, duration: 1200 }, { value: 0, duration: 800 }],
-//   rotate: {
-//     value: "1turn",
-//     ease: "easeInOutSine"
-//   }
-// });
-// anime({
-//   targets: "div.box.blue",
-//   translateY: [{ value: 100, duration: 1200 }, { value: 0, duration: 800 }],
-//   rotate: {
-//     value: "1turn",
-//     ease: "easeInOutSine"
-//   }
-// });
-//
-// anime({
-//   targets: "div.box.green",
-//   translateY: [
-//     { value: 100, duration: 1200 },
-//     { value: 0, duration: 800, delay: 300 }
-//   ],
-//   rotate: {
-//     value: "2turn",
-//     ease: "easeInOutSine",
-//     delay: 300
-//   }
-// });
-// anime({
-//   targets: "div.box.yellow",
-//   translateY: [{ value: 100, duration: 1200 }, { value: 0, duration: 800 }],
-//   rotate: {
-//     value: "1turn",
-//     ease: "easeInOutSine",
-//     delay: 300
-//   }
-// });
-
 var playPause = anime({
   targets: "div.box",
-  translateY: [{ value: 100, duration: 1200 }, { value: 0, duration: 800 }],
+  translateY: [{ value: 200, duration: 1200 }, { value: 0, duration: 1000 }],
+  translateX: [{ value: 100, duration: 1200 }, { value: 0, duration: 1000 }],
   rotate: {
     value: "1turn",
     ease: "easeInOutSine"
@@ -51,9 +13,19 @@ var playPause = anime({
   },
 
   autoplay: false,
-  loop: true
+  loop: true,
+
+  translateY: 150,
+  direction: "alternate",
+  loop: true,
+  delay: function(el, i, l) {
+    return i * 200;
+  }
 });
 // playPause.pause();
+
+// document.querySelector("#boxes .play").onclick = playPause.play;
+// document.querySelector("#boxes .pause").onclick = playPause.pause;
 
 document.querySelector("#boxes .play").onclick = playPause.play;
 document.querySelector("#boxes .pause").onclick = playPause.pause;
